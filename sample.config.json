@@ -1,34 +1,17 @@
 {
   "TOKEN": "NzA1NzcyNzMxMjcwMDM3NTY0...",
-  "WEBHOOK_URL": "https://discord.com/api.v10",
-
-  "SOURCE_GUILD_ID": "1247958702628278332",
+  "WEBHOOK_URL": "https://discord.com/api/v10",
 
   "mirrors": [
     {
       "_comment": "Balanced (info-main channel)",
-      "name": "News",
       "channelId": "1310841156480925709",
-      "webhook_url": "https://discord.com/api/webhooks/dummy/dummy",
-      "use_user_profile": true,
-      "blocked_words": ["nephra", "kidney"],
-      "allowed_words": ["stop", "nepotism"],
-      "allowed_senders": ["1234567788", "0987654321"],
-      "remove_discord_links": true,
-      "remove_everyone_ping": true,
-      "remove_channels": true,
-      "remove_roles": true,
-      "custom_names": {
-        "620547628857425920": "Abraham Signals"
-      }
+      "sourceId": 1
     },
     {
       "_comment": "Test",
       "channelId": "1170066899934130197",
-      "webhook_url": "https://discord.com/api/webhooks/dummy/dummy",
-      "use_chatgpt_conversion": true,
-      "gpt_model": "gpt-3.5-turbo",
-      "chatgpt_instruction": "You are an esteemed stock, options, and equities trader. You KNOW all the ticker symbols on the NYSE and other major stock exchanges. Your task is to summarize messages in bullet points in your own words and analysis. Rewrite the reply in bullet points and not in whole sentences. Make it simple, concise, and to the point."
+      "sourceId": 2
     }
   ]
 }

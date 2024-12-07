@@ -4,17 +4,6 @@ const { mirrors } = require("../../config.json");
 
 const { verifyMessage } = require("../utils/messageVerification");
 const { sendWebhook } = require("../utils/messageSend");
-const {
-  addGuildName,
-  removeInviteLinks,
-  addReplyIfExists,
-  removeEveryonePing,
-  removeChannelMentions,
-  removeRoles,
-  removeUnknownUsers,
-} = require("../utils/messageManipulation");
-const messageMap = require("../cache/messageMap");
-const { useChatGptToConvertMessage } = require("../utils/openai");
 
 module.exports = class MirrorClient extends Client {
   constructor(options) {
