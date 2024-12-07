@@ -1,6 +1,7 @@
-require("dotenv").config();
+const { TOKEN } = require("./../config.json");
+
 const MirrorClient = require("./classes/client");
 
 const client = new MirrorClient({});
 
-client.login(process.env.TOKEN);
+client.login(TOKEN);

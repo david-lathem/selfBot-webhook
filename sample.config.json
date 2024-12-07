@@ -1,12 +1,14 @@
 {
-  "status": "invisible",
+  "TOKEN": "NzA1NzcyNzMxMjcwMDM3NTY0...",
+  "WEBHOOK_URL": "https://discord.com/api.v10",
+
   "SOURCE_GUILD_ID": "1247958702628278332",
 
   "mirrors": [
     {
       "_comment": "Balanced (info-main channel)",
       "name": "News",
-      "channel_id": "1170066899934130197",
+      "channelId": "1310841156480925709",
       "webhook_url": "https://discord.com/api/webhooks/dummy/dummy",
       "use_user_profile": true,
       "blocked_words": ["nephra", "kidney"],
@@ -22,7 +24,7 @@
     },
     {
       "_comment": "Test",
-      "channel_id": "1170066899934130197",
+      "channelId": "1170066899934130197",
       "webhook_url": "https://discord.com/api/webhooks/dummy/dummy",
       "use_chatgpt_conversion": true,
       "gpt_model": "gpt-3.5-turbo",
