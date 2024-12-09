@@ -14,6 +14,10 @@ const sendWebhook = async (message, data) => {
     console.log(await res.text());
     throw new Error(res.status, ": ", res.statusText);
   }
+
+  console.log(
+    `Sent message received on ${message.channel.name} (${message.channel.id}): ${message.content}`
+  );
 };
 
 module.exports = { sendWebhook };

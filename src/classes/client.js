@@ -25,9 +25,13 @@ module.exports = class MirrorClient extends Client {
     try {
       const { channelId } = message;
 
+      console.log(`Message received in ${channelId}: ${message.content}`);
+
       const data = this.mirrors.find((m) => m.channelId === channelId);
 
       await verifyMessage(data, message);
+
+      console.log("This message is from our target channels");
 
       await sendWebhook(message, data);
     } catch (error) {
