@@ -4,6 +4,11 @@ const { mirrors } = require("../../config.json");
 
 const { verifyMessage } = require("../utils/messageVerification");
 const { sendWebhook } = require("../utils/messageSend");
+const {
+  removeChannelMentions,
+  removeRoles,
+  removeUnknownUsers,
+} = require("../utils/messageManipulation");
 
 module.exports = class MirrorClient extends Client {
   constructor(options) {
@@ -25,13 +30,14 @@ module.exports = class MirrorClient extends Client {
     try {
       const { channelId } = message;
 
-      console.log(`Message received in ${channelId}: ${message.content}`);
-
       const data = this.mirrors.find((m) => m.channelId === channelId);
 
       await verifyMessage(data, message);
 
-      console.log("This message is from our target channels");
+      removeChannelMentions(message);
+      removeRoles(message);
+      removeUnknownUsers(message);
+      console.log(`Message received in ${channelId}: ${message.content}`);
 
       await sendWebhook(message, data);
     } catch (error) {
