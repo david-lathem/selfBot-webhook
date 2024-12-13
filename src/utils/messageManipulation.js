@@ -13,10 +13,11 @@ exports.removeInviteLinks = (remove_discord_links, message) => {
   message.content = message.content.replace(discordInviteRegex, "");
 };
 
-exports.removeEveryonePing = (remove_everyone_ping, message) => {
-  if (!remove_everyone_ping) return;
-
+exports.removeEveryonePing = (message) => {
   message.content = message.content.replaceAll(`@everyone`, "");
+};
+exports.removeHerePing = (message) => {
+  message.content = message.content.replaceAll(`@here`, "");
 };
 
 exports.removeChannels = (message) => {

@@ -8,6 +8,8 @@ const {
   removeChannelMentions,
   removeRoles,
   removeUnknownUsers,
+  removeEveryonePing,
+  removeHerePing,
 } = require("../utils/messageManipulation");
 
 module.exports = class MirrorClient extends Client {
@@ -37,6 +39,8 @@ module.exports = class MirrorClient extends Client {
       removeChannelMentions(message);
       removeRoles(message);
       removeUnknownUsers(message);
+      removeEveryonePing(message);
+      removeHerePing(message);
       console.log(`Message received in ${channelId}: ${message.content}`);
 
       await sendWebhook(message, data);
